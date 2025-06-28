@@ -15,5 +15,5 @@
     "source.fixAll": "explicit"
     // "source.organizeImports": "explicit"
   },
-  "cSpell.words": ["deepseek"]
+  "cSpell.words": ["deepseek", "SUPABASE"]
 }
