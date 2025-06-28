@@ -27,14 +27,14 @@ const visibilities: Array<{
 }> = [
   {
     id: 'private',
-    label: 'Private',
-    description: 'Only you can access this chat',
+    label: '私密',
+    description: '只有你能访问此对话',
     icon: <LockIcon />,
   },
   {
     id: 'public',
-    label: 'Public',
-    description: 'Anyone with the link can access this chat',
+    label: '公开',
+    description: '任何有链接的人都能访问此对话',
     icon: <GlobeIcon />,
   },
 ];

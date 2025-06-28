@@ -1,11 +1,17 @@
 'use client';
 
-import { ChatRequestOptions, Message } from 'ai';
+import type { Message } from 'ai';
 import { Button } from './ui/button';
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
+import {
+  type Dispatch,
+  type SetStateAction,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { Textarea } from './ui/textarea';
 import { deleteTrailingMessages } from '@/app/(chat)/actions';
-import { UseChatHelpers } from '@ai-sdk/react';
+import type { UseChatHelpers } from '@ai-sdk/react';
 
 export type MessageEditorProps = {
   message: Message;
@@ -61,7 +67,7 @@ export function MessageEditor({
             setMode('view');
           }}
         >
-          Cancel
+          取消
         </Button>
         <Button
           data-testid="message-editor-send-button"
@@ -96,7 +102,7 @@ export function MessageEditor({
             reload();
           }}
         >
-          {isSubmitting ? 'Sending...' : 'Send'}
+          {isSubmitting ? '发送中...' : '发送'}
         </Button>
       </div>
     </div>
