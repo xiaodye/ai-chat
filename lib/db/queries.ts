@@ -38,8 +38,11 @@ import { ChatSDKError } from '../errors';
 // use the Drizzle adapter for Auth.js / NextAuth
 // https://authjs.dev/reference/adapter/drizzle
 
+// const client = postgres(process.env.POSTGRES_URL!);
+
+// 使用 Supabase 的 PostgreSQL
 // biome-ignore lint: Forbidden non-null assertion.
-const client = postgres(process.env.POSTGRES_URL!);
+const client = postgres(process.env.SUPABASE_POSTGRES_URL!, { prepare: false });
 const db = drizzle(client);
 
 export async function getUser(email: string): Promise<Array<User>> {
