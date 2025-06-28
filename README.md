@@ -4,17 +4,8 @@
 </a>
 
 <p align="center">
-    Chat SDK is a free, open-source template built with Next.js and the AI SDK that helps you quickly build powerful chatbot applications.
+    Chat SDK 是一个免费的开源模板，基于 Next.js 和 AI SDK 构建，可帮助您快速构建强大的聊天机器人应用程序。
 </p>
-
-<p align="center">
-  <a href="https://chat-sdk.dev"><strong>Read Docs</strong></a> ·
-  <a href="#features"><strong>Features</strong></a> ·
-  <a href="#model-providers"><strong>Model Providers</strong></a> ·
-  <a href="#deploy-your-own"><strong>Deploy Your Own</strong></a> ·
-  <a href="#running-locally"><strong>Running locally</strong></a>
-</p>
-<br/>
 
 ## Features
 
@@ -36,7 +27,7 @@
 
 ## Model Providers
 
-This template ships with [xAI](https://x.ai) `grok-2-1212` as the default chat model. However, with the [AI SDK](https://sdk.vercel.ai/docs), you can switch LLM providers to [OpenAI](https://openai.com), [Anthropic](https://anthropic.com), [Cohere](https://cohere.com/), and [many more](https://sdk.vercel.ai/providers/ai-sdk-providers) with just a few lines of code.
+本模板默认使用 [DeepSeek](https://deepseek.ai) 作为默认聊天模型。不过，通过 [AI SDK](https://sdk.vercel.ai/docs)，您只需几行代码就可以切换到 [OpenAI](https://openai.com)、[Anthropic](https://anthropic.com)、[Cohere](https://cohere.com/) 等[其他 LLM 提供商](https://sdk.vercel.ai/providers/ai-sdk-providers)。
 
 ## Deploy Your Own
 
