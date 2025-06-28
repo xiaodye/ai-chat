@@ -13,7 +13,7 @@ import { Button } from './ui/button';
 export function SidebarToggle({
   className,
 }: ComponentProps<typeof SidebarTrigger>) {
-  const { toggleSidebar } = useSidebar();
+  const { toggleSidebar, open } = useSidebar();
 
   return (
     <Tooltip>
@@ -27,7 +27,7 @@ export function SidebarToggle({
           <SidebarLeftIcon size={16} />
         </Button>
       </TooltipTrigger>
-      <TooltipContent align="start">切换侧边栏</TooltipContent>
+      <TooltipContent align="start">{open ? '收起' : '展开'}</TooltipContent>
     </Tooltip>
   );
 }
