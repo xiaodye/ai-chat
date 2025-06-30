@@ -4,6 +4,8 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/next';
+import '@ant-design/v5-patch-for-react-19';
+import { AntdRegistry } from '@ant-design/nextjs-registry';
 
 import './globals.css';
 import { SessionProvider } from 'next-auth/react';
@@ -75,15 +77,19 @@ export default async function RootLayout({
       <body className="antialiased">
         <SpeedInsights />
         <Analytics />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Toaster position="top-center" />
-          <SessionProvider>{children}</SessionProvider>
-        </ThemeProvider>
+        <SessionProvider>
+          <AntdRegistry>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <Toaster position="top-center" />
+              {children}
+            </ThemeProvider>
+          </AntdRegistry>
+        </SessionProvider>
       </body>
     </html>
   );

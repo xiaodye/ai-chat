@@ -21,6 +21,8 @@ import {
   DropdownMenuTrigger,
 } from './ui/dropdown-menu';
 
+import { Button as AntdButton, message } from 'antd';
+
 function PureChatHeader({
   chatId,
   selectedModelId,
@@ -45,6 +47,8 @@ function PureChatHeader({
   }, []);
 
   const { width: windowWidth } = useWindowSize();
+
+  const [messageApi, contextHolder] = message.useMessage();
 
   return (
     <header className="flex sticky top-0 bg-background py-1.5 items-center px-2 md:px-2 gap-2">
@@ -116,7 +120,14 @@ function PureChatHeader({
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
+        {contextHolder}
       </div>
+      <AntdButton
+        className="order-4 md:order-5"
+        onClick={() => messageApi.info('info')}
+      >
+        测试 antd
+      </AntdButton>
     </header>
   );
 }
