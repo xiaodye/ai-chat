@@ -12,8 +12,8 @@ import { SessionProvider } from 'next-auth/react';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://chat.vercel.ai'),
-  title: 'Next.js 聊天机器人模板',
-  description: '使用 AI SDK 的 Next.js 聊天机器人模板。',
+  title: 'Next.js 聊天机器人',
+  description: '使用 AI SDK 的 Next.js 聊天机器人',
 };
 
 export const viewport = {
